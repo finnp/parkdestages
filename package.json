@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "deploy": "gh-pages-deploy",
-    "build": "browserify browser.js > bundle.js",
+    "build": "browserify browser.js -o bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/finnp/parkdestages.git"
-  },
+  },  
   "author": "Finn Pauls",
   "license": "MIT",
   "bugs": {
@@ -28,7 +28,7 @@
     "gh-pages-deploy": "^0.3.0"
   },
   "gh-pages-deploy": {
-    "prep": ["npm run build"],
+    "prep": ["build"],
     "noprompt": true
   }
 }
