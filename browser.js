@@ -6,5 +6,5 @@ var todayHash = hash(today)
 
 var todayPark = parks[todayHash % parks.length]
 
-document.querySelector('#parkdestages').innerText = todayPark
+document.querySelector('#parkdestages').innerHTML = todayPark
 console.log(todayPark)
