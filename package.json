@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "deploy": "gh-pages-deploy",
+    "build": "browserify browser.js > bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,6 +28,7 @@
     "gh-pages-deploy": "^0.3.0"
   },
   "gh-pages-deploy": {
-    "prep": ["browserify browser.js > bundle.js"]
+    "prep": ["npm run build"],
+    "noprompt": true
   }
 }
